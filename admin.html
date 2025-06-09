@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div id="login-screen">
+        <form id="login-form">
+            <h2>Đăng Nhập Admin</h2>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Tên người dùng" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Mật khẩu" required>
+            </div>
+            <div class="input-group remember-me">
+                <label>
+                    <input type="checkbox" id="remember-login"> Lưu đăng nhập
+                </label>
+            </div>
+            <button type="submit">Đăng Nhập</button>
+        </form>
+        <div id="login-success" class="login-success">Đăng nhập thành công!</div>
+    </div>
+    <div id="update-success" class="update-success">Cập nhật thành công!</div>
+    <div id="error-message" class="error-message"></div>
+    <div id="delete-confirmation" class="delete-confirmation">
+        <p>Bạn có chắc chắn muốn xóa chapter này hay không?</p>
+        <div class="button-group">
+            <button id="confirm-delete">Xác nhận</button>
+            <button id="cancel-delete">Hủy</button>
+        </div>
+    </div>
+    <header></header>
+    <main style="display: none;">
+        <h2>Thông tin truyện</h2>
+        <form id="novel-info-form">
+            <label>Tiêu đề: <input id="title-input" type="text"></label>
+            <label>Thể loại: <input id="genre-input" type="text"></label>
+            <label>Giới thiệu: <textarea id="intro-input"></textarea></label>
+            <label>Tác giả: <input id="author-input" type="text"></label>
+            <label>Ảnh bìa (URL): <input id="cover-input" type="text"></label>
+            <label>Banner (URL): <input id="banner-input" type="text"></label>
+            <button type="submit">Lưu</button>
+        </form>
+        <h2>Thêm Chapter</h2>
+        <form id="add-chapter-form">
+            <label>Tiêu đề: <input id="new-chapter-title" type="text"></label>
+            <label>Nội dung tiêu đề: <input id="new-chapter-heading" type="text"></label>
+            <label>Nội dung: <textarea id="new-chapter-content"></textarea></label>
+            <button type="submit">Thêm Chapter</button>
+        </form>
+        <h2>Danh sách Chapter</h2>
+        <div id="admin-chapter-list" class="chapter-grid"></div>
+    </main>
+    <script src="data.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
